@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-    const test = useTest();
+    const {test} = useTest();
 </script>

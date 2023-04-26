@@ -12,7 +12,7 @@ export default defineNuxtConfig({
                 { name: "format-detection", content: "no" }
             ],
             link: [
-                { rel: "shortcut-icon", href: "/favicon.ico" }
+                { rel: "shortcut-icon", href: "/favicon.svg" }
             ],
             noscript: [
                 { children: "JavaScript is required to run this project" }
