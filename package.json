@@ -1,0 +1,26 @@
+{
+    "name": "nuxt-template",
+    "version": "0.0.1",
+    "private": true,
+    "packageManager": "pnpm@8.3.1",
+    "description": "Personal Nuxt 3 starter template",
+    "author": "Nicola Spadari",
+    "scripts": {
+        "dev": "nuxt dev",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "eslint . --fix"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^0.38.5",
+        "@unocss/nuxt": "^0.51.8",
+        "@vueuse/nuxt": "^10.1.0",
+        "eslint": "^8.39.0",
+        "nuxt": "^3.4.2",
+        "sass": "^1.62.0",
+        "typescript": "^5.0.4",
+        "unplugin-auto-import": "^0.15.3"
+    }
+}
