@@ -5,15 +5,15 @@
 
 Clone to local:
 ```sh
-$ degit NicolaSpadari/nuxt-template <my-app>
+$ npx degit NicolaSpadari/nuxt-template my-nuxt-app
 ```
 
 Install dependencies:
 ```sh
-$ ni
+$ ni # or pnpm install
 ```
 
 Run project:
 ```sh
-$ nr dev
+$ nr dev # or pnpm run dev
 ```
