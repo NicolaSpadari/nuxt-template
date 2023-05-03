@@ -1,7 +1,11 @@
 import AutoImport from "unplugin-auto-import/vite";
 
 export default defineNuxtConfig({
-    modules: ["@vueuse/nuxt", "@unocss/nuxt"],
+    modules: [
+        "@vueuse/nuxt",
+        "@unocss/nuxt",
+        "nuxt-typed-router"
+    ],
     app: {
         head: {
             title: "Nuxt template",
@@ -11,6 +15,9 @@ export default defineNuxtConfig({
                 { name: "theme-color", content: "#1b1b1b" },
                 { name: "format-detection", content: "no" }
             ],
+            bodyAttrs: {
+                class: "font-text"
+            },
             link: [
                 { rel: "shortcut-icon", href: "/favicon.svg" }
             ],
@@ -26,6 +33,11 @@ export default defineNuxtConfig({
         plugins: [
             AutoImport({})
         ]
+    },
+    vue: {
+        compilerOptions: {
+            isCustomElement: (tag: string) => tag.startsWith("i-")
+        }
     },
     nitro: {
         prerender: {

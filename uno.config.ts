@@ -10,9 +10,12 @@ import {
     transformerVariantGroup
 } from "unocss";
 
+import { presetScrollbar } from "unocss-preset-scrollbar";
+
 export default defineConfig({
     shortcuts: [
-        ["crate", "container mx-auto"]
+        ["crate", "container max-w-5xl mx-auto px-4 sm:px-2 md:px-10 xl:px-20"],
+        ["flex-center", "flex justify-center items-center"]
     ],
     presets: [
         presetUno(),
@@ -33,7 +36,8 @@ export default defineConfig({
                 },
                 text: "Inter"
             }
-        })
+        }),
+        presetScrollbar()
     ],
     theme: {
         breakpoints: {

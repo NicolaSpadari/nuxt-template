@@ -4,6 +4,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^0.38.5
     version: 0.38.5(eslint@8.39.0)(typescript@5.0.4)
+  '@iconify-json/heroicons-solid':
+    specifier: ^1.1.7
+    version: 1.1.7
   '@unocss/nuxt':
     specifier: ^0.51.8
     version: 0.51.8(postcss@8.4.23)(vite@4.3.2)(webpack@5.80.0)
@@ -16,12 +19,18 @@ devDependencies:
   nuxt:
     specifier: ^3.4.2
     version: 3.4.2(@types/node@18.16.1)(eslint@8.39.0)(sass@1.62.1)(typescript@5.0.4)
+  nuxt-typed-router:
+    specifier: ^3.2.0
+    version: 3.2.0
   sass:
     specifier: ^1.62.1
     version: 1.62.1
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
+  unocss-preset-scrollbar:
+    specifier: ^0.2.1
+    version: 0.2.1(unocss@0.51.8)
   unplugin-auto-import:
     specifier: ^0.15.3
     version: 0.15.3
@@ -709,6 +718,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/heroicons-solid@1.1.7:
+    resolution: {integrity: sha512-eHg55+AvKHHxhg9D3s+ldW8yh3myWeC5LH36OGF1w25e41ruixIlpCEcXbnvREH0y7XV7NY1AykGQ8rDVwA9cQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -1375,6 +1390,10 @@ packages:
       unconfig: 0.3.7
     dev: true
 
+  /@unocss/core@0.31.17:
+    resolution: {integrity: sha512-DJ3Uk2ePVXvV1qQmgoLK44aqB6f0s+naOEvouI97nzVXDZgxDQPBxIPB/L4vvE4U+gQxEiHwwE3gJ75iPqVzXw==}
+    dev: true
+
   /@unocss/core@0.51.8:
     resolution: {integrity: sha512-myHRKBphEN3h0OnsUhg2JaFKjFGfqF/jmmzZCCMNU5UmxbheZomXANNLYXVgEP6LHvd4xAF0DEzrOBcDPLf0HQ==}
     dev: true
@@ -1445,6 +1464,12 @@ packages:
       ofetch: 1.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@unocss/preset-mini@0.31.17:
+    resolution: {integrity: sha512-gVgMTOKLt3O1ym348QIBmR5sS9W0Ozkk5xelhH6e0VXcpg0dXDPDrl4hFErMy4x6IB86yyJG6Dz5JhcwQB13Ig==}
+    dependencies:
+      '@unocss/core': 0.31.17
     dev: true
 
   /@unocss/preset-mini@0.51.8:
@@ -4469,6 +4494,10 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
+
   /lodash._reinterpolate@3.0.0:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
     dev: true
@@ -4746,6 +4775,12 @@ packages:
     hasBin: true
     dev: true
 
+  /mkdirp@3.0.1:
+    resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   /mlly@1.2.0:
     resolution: {integrity: sha512-+c7A3CV0KGdKcylsI6khWyts/CYrGTrRVo4R/I7u/cUsy0Conxa6LUhiEzVKIw14lc2L5aiO4+SeVe4TeGRKww==}
     dependencies:
@@ -4988,6 +5023,23 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /nuxt-typed-router@3.2.0:
+    resolution: {integrity: sha512-f8CSfiAsm6mImeRDaWVVOvd22NlBbVeNRKCOWrU/HbGR4QemRVTj/SGJ/pjc7EPQrJRFMqpfqTKOUkiUwRdkAQ==}
+    dependencies:
+      '@nuxt/kit': 3.4.2
+      chalk: 5.2.0
+      defu: 6.1.2
+      lodash-es: 4.17.21
+      log-symbols: 5.1.0
+      mkdirp: 3.0.1
+      nanoid: 4.0.2
+      pathe: 1.1.0
+      prettier: 2.8.8
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /nuxt@3.4.2(@types/node@18.16.1)(eslint@8.39.0)(sass@1.62.1)(typescript@5.0.4):
@@ -5681,6 +5733,12 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-bytes@6.1.0:
@@ -6593,6 +6651,15 @@ packages:
   /universalify@2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
+    dev: true
+
+  /unocss-preset-scrollbar@0.2.1(unocss@0.51.8):
+    resolution: {integrity: sha512-7ubHdOaUwr7xBn1glPpICNNsM2SZGjvWK5uRPNiQYsrZ9YFjsCGHk9x5S2R8pTkuMDQeiaSa/UQbYhjC8Fra5g==}
+    peerDependencies:
+      unocss: '>= 0.31.13 < 1'
+    dependencies:
+      '@unocss/preset-mini': 0.31.17
+      unocss: 0.51.8(@unocss/webpack@0.51.8)(postcss@8.4.23)(vite@4.3.2)
     dev: true
 
   /unocss@0.51.8(@unocss/webpack@0.51.8)(postcss@8.4.23)(vite@4.3.2):
