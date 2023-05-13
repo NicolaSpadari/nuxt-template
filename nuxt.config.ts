@@ -4,11 +4,14 @@ export default defineNuxtConfig({
     modules: [
         "@vueuse/nuxt",
         "@unocss/nuxt",
+		"@nuxt/image-edge",
+		"nuxt-svgo",
+		"nuxt-security",
         "nuxt-typed-router"
     ],
     app: {
         head: {
-            title: "Nuxt template",
+            title: "Nuxt 3 template",
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
             meta: [
@@ -29,6 +32,9 @@ export default defineNuxtConfig({
     css: [
         "@unocss/reset/tailwind.css"
     ],
+	svgo: {
+        autoImportPath: "./assets/"
+    },
     vite: {
         plugins: [
             AutoImport({})
