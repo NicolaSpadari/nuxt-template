@@ -1,7 +1,7 @@
 <template>
     <div text-center space-y-5>
-        <p>{{ test }}</p>
-        <i-heroicons-solid-user w-5 h-5 text-blue-400 />
+        {{ test }}
+        <i-heroicons-solid-check w-5 h-5 text-blue-400 />
     </div>
 </template>
 
