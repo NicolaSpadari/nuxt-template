@@ -3,6 +3,19 @@
 </template>
 
 <style lang="scss">
+	html {
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+        @apply min-h-screen;
+    }
+    body {
+        @apply overflow-x-hidden;
+    }
+    img {
+        -webkit-user-drag: none;
+        @apply select-none;
+    }
+	
     .custom-scrollbar{
         scrollbar-color: theme("colors.zinc.200") initial;
         scrollbar-width: thin;
