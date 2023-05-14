@@ -1,7 +1,7 @@
 export const useTest = () => {
-    const test = ref("Text from composable");
+	const test = ref("Text from composable");
 
-    return {
-        test
-    };
+	return {
+		test
+	};
 };

@@ -1,4 +1,4 @@
 declare interface MyInterface {
-    id: string
+	id: string
 	name: string
 }

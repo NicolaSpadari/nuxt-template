@@ -4,57 +4,57 @@ import { colors } from "@unocss/preset-mini";
 const dark800 = typeof colors?.dark === "string" ? colors?.dark : colors?.dark?.[800];
 
 export default defineNuxtConfig({
-    modules: [
+	modules: [
 		"@vueuse/nuxt",
 		"@unocss/nuxt",
 		"@nuxt/image-edge",
 		"nuxt-svgo",
 		"nuxt-security",
 		"nuxt-typed-router"
-    ],
-    app: {
-        head: {
-            title: "Nuxt 3 template",
-            charset: "utf-8",
-            viewport: "width=device-width, initial-scale=1",
-            meta: [
-                { name: "theme-color", content: dark800 },
-                { name: "format-detection", content: "no" }
-            ],
-            bodyAttrs: {
-                class: "font-text"
-            },
-            link: [
-                { rel: "shortcut-icon", href: "/favicon.svg" }
-            ],
-            noscript: [
-                { children: "JavaScript is required to run this project" }
-            ]
-        }
-    },
-    css: [
-        "@unocss/reset/tailwind.css"
-    ],
+	],
+	app: {
+		head: {
+			title: "Nuxt 3 template",
+			charset: "utf-8",
+			viewport: "width=device-width, initial-scale=1",
+			meta: [
+				{ name: "theme-color", content: dark800 },
+				{ name: "format-detection", content: "no" }
+			],
+			bodyAttrs: {
+				class: "font-text"
+			},
+			link: [
+				{ rel: "shortcut-icon", href: "/favicon.svg" }
+			],
+			noscript: [
+				{ children: "JavaScript is required to run this project" }
+			]
+		}
+	},
+	css: [
+		"@unocss/reset/tailwind.css"
+	],
 	svgo: {
-        autoImportPath: "./assets/"
-    },
-    vite: {
-        plugins: [
-            AutoImport({})
-        ]
-    },
-    vue: {
-        compilerOptions: {
-            isCustomElement: (tag: string) => tag.startsWith("i-")
-        }
-    },
-    nitro: {
-        prerender: {
-            routes: ["/"]
-        }
-    },
-    sourcemap: {
-        server: true,
-        client: false
-    }
+		autoImportPath: "./assets/"
+	},
+	vite: {
+		plugins: [
+			AutoImport({})
+		]
+	},
+	vue: {
+		compilerOptions: {
+			isCustomElement: (tag: string) => tag.startsWith("i-")
+		}
+	},
+	nitro: {
+		prerender: {
+			routes: ["/"]
+		}
+	},
+	sourcemap: {
+		server: true,
+		client: false
+	}
 });
