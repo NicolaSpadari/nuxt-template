@@ -1,4 +1,7 @@
 import AutoImport from "unplugin-auto-import/vite";
+import { colors } from "@unocss/preset-mini";
+
+const dark800 = typeof colors?.dark === "string" ? colors?.dark : colors?.dark?.[800];
 
 export default defineNuxtConfig({
     modules: [
@@ -15,7 +18,7 @@ export default defineNuxtConfig({
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
             meta: [
-                { name: "theme-color", content: "#1b1b1b" },
+                { name: "theme-color", content: dark800 },
                 { name: "format-detection", content: "no" }
             ],
             bodyAttrs: {
