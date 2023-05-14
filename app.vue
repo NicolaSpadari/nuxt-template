@@ -15,7 +15,7 @@
         -webkit-user-drag: none;
         @apply select-none;
     }
-	
+
     .custom-scrollbar{
         scrollbar-color: theme("colors.zinc.200") initial;
         scrollbar-width: thin;
