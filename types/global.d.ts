@@ -1,10 +1,4 @@
-declare interface SidebarMenuPage {
-    icon: string
-    name: string
-    path: string
-}
-
-declare interface SidebarMenu {
-    title: string
-    pages: SidebarMenuPage[]
+declare interface MyInterface {
+    id: string
+	name: string
 }
