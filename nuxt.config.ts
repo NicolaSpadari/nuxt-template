@@ -5,12 +5,12 @@ const dark800 = typeof colors?.dark === "string" ? colors?.dark : colors?.dark?.
 
 export default defineNuxtConfig({
     modules: [
-        "@vueuse/nuxt",
-        "@unocss/nuxt",
+		"@vueuse/nuxt",
+		"@unocss/nuxt",
 		"@nuxt/image-edge",
 		"nuxt-svgo",
 		"nuxt-security",
-        "nuxt-typed-router"
+		"nuxt-typed-router"
     ],
     app: {
         head: {
