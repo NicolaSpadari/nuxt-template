@@ -32,6 +32,14 @@ export default defineNuxtConfig({
 			]
 		}
 	},
+	security: {
+		basicAuth: {
+			name: String(process.env.AUTH_NAME),
+			pass: String(process.env.AUTH_PASS),
+			enabled: (Boolean(process.env.AUTH_ENABLED) && process.dev) || false,
+			message: "Please login to continue"
+		}
+	},
 	css: [
 		"@unocss/reset/tailwind.css"
 	],
