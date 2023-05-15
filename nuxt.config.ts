@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 		basicAuth: {
 			name: String(process.env.AUTH_NAME),
 			pass: String(process.env.AUTH_PASS),
-			enabled: (Boolean(process.env.AUTH_ENABLED) && process.dev) || false,
+			enabled: (Boolean(process.env.AUTH_ENABLED) && !process.env) || false,
 			message: "Please login to continue"
 		}
 	},
