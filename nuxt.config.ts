@@ -9,9 +9,18 @@ export default defineNuxtConfig({
 		"@unocss/nuxt",
 		"@nuxt/image-edge",
 		"nuxt-svgo",
-		"nuxt-security",
-		"nuxt-typed-router"
+		"nuxt-security"
 	],
+	$production: {
+		security: {
+			basicAuth: {
+				name: String(process.env.AUTH_NAME),
+				pass: String(process.env.AUTH_PASS),
+				enabled: Boolean(process.env.AUTH_ENABLED) || false,
+				message: "Please login to continue"
+			}
+		}
+	},
 	app: {
 		head: {
 			title: "Nuxt 3 template",
@@ -32,13 +41,8 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	security: {
-		basicAuth: {
-			name: String(process.env.AUTH_NAME),
-			pass: String(process.env.AUTH_PASS),
-			enabled: (Boolean(process.env.AUTH_ENABLED) && !process.env) || false,
-			message: "Please login to continue"
-		}
+	experimental: {
+		typedPages: true
 	},
 	css: [
 		"@unocss/reset/tailwind.css"
