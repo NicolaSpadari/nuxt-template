@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@unocss/nuxt",
 		"@nuxt/image-edge",
+		"nuxt-capo",
 		"nuxt-svgo",
 		"nuxt-security"
 	],
