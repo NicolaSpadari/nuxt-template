@@ -8,20 +8,9 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@unocss/nuxt",
 		"@nuxt/image-edge",
-		"nuxt-capo",
 		"nuxt-svgo",
 		"nuxt-security"
 	],
-	$production: {
-		security: {
-			basicAuth: {
-				name: String(process.env.AUTH_NAME),
-				pass: String(process.env.AUTH_PASS),
-				enabled: Boolean(process.env.AUTH_ENABLED) || false,
-				message: "Please login to continue"
-			}
-		}
-	},
 	app: {
 		head: {
 			title: "Nuxt 3 template",
