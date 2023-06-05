@@ -16,21 +16,6 @@
 		@apply select-none;
 	}
 
-	.custom-scrollbar{
-		scrollbar-color: theme("colors.zinc.200") initial;
-		scrollbar-width: thin;
-		@apply overflow-overlay;
-		&::-webkit-scrollbar{
-			@apply w-2 h-2 pb-1;
-			&-track{
-				background-color: initial;
-			}
-			&-thumb{
-				@apply bg-neutral-300 transition-colors duration-500 rounded;
-			}
-		}
-	}
-
 	// Transitions
 	.fade-enter-active,
 	.fade-leave-active {
