@@ -2,7 +2,7 @@
     "name": "nuxt-template",
     "version": "1.0.0",
     "private": true,
-    "packageManager": "pnpm@8.6.10",
+    "packageManager": "pnpm@8.7.1",
     "description": "Personal Nuxt 3 starter template",
     "author": "Nicola Spadari",
     "scripts": {
@@ -14,18 +14,17 @@
         "lint": "eslint . --fix"
     },
     "devDependencies": {
-        "@antfu/eslint-config": "^0.39.8",
-        "@iconify-json/heroicons-solid": "^1.1.7",
-        "@nuxt/image-edge": "1.0.0-rc.1-28164352.ad7c010",
-        "@unocss/nuxt": "^0.54.0",
-        "@vueuse/core": "^10.2.1",
-        "@vueuse/nuxt": "^10.2.1",
-        "eslint": "^8.46.0",
-        "nuxt": "^3.6.5",
-        "nuxt-security": "^0.14.3",
-        "nuxt-svgo": "^3.4.0",
-        "sass": "^1.64.1",
-        "typescript": "^5.1.6",
+        "@antfu/eslint-config": "^0.41.0",
+        "@iconify-json/heroicons-solid": "^1.1.8",
+        "@nuxt/image-edge": "1.0.0-rc.1-28224985.8423773",
+        "@unocss/nuxt": "^0.55.7",
+        "@vueuse/core": "^10.4.1",
+        "@vueuse/nuxt": "^10.4.1",
+        "eslint": "^8.48.0",
+        "nuxt": "^3.7.0",
+        "nuxt-svgo": "^3.5.0",
+        "sass": "^1.66.1",
+        "typescript": "^5.2.2",
         "unplugin-auto-import": "^0.16.6"
     }
 }

@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
 	return {
-		test: "Test"
+		test: "This comes from the server"
 	};
 });
