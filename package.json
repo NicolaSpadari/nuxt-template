@@ -10,6 +10,7 @@
         "build": "nuxt build",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
+		"preinstall": "npx only-allow pnpm",
         "postinstall": "nuxt prepare",
         "lint": "eslint . --fix"
     },
