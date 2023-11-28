@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 	modules: [
 		"@vueuse/nuxt",
 		"@unocss/nuxt",
-		"@nuxt/image-edge",
+		"@nuxt/image",
 		"nuxt-svgo"
 	],
 	app: {
