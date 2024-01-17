@@ -7,4 +7,3 @@ node_modules
 .output
 .env
 dist
-firebase/credentials.json
