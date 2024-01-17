@@ -2,7 +2,7 @@
     "name": "nuxt-template",
     "version": "1.0.0",
     "private": true,
-    "packageManager": "pnpm@8.11.0",
+    "packageManager": "pnpm@8.14.1",
     "description": "Personal Nuxt 3 starter template",
     "author": "Nicola Spadari",
     "scripts": {
