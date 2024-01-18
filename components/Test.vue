@@ -6,5 +6,11 @@
 </template>
 
 <script lang="ts" setup>
-const { test } = useTest();
+	const { test } = useTest();
 </script>
+
+<style lang="scss" scoped>
+.myrule {
+	@apply color-red-500 border-collapse;
+}
+</style>
