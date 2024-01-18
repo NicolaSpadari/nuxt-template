@@ -56,7 +56,8 @@ export default eslintConfig(
 			"style/indent": "off",
 			"format/prettier": ["error", {
 				"parser": "scss",
-				"useTabs": true
+				"useTabs": true,
+				"vueIndentScriptAndStyle": true
 			}]
 		}
 	}
