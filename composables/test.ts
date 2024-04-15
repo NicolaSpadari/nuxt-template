@@ -1,13 +1,14 @@
-export const useTest = () => {
-	const test = ref("Text from composable");
+const test = ref("Text from composable");
 
-	if (test.value !== "") {
-		console.log(true);
-	} else {
-		console.log(false);
-	}
+export const useTest = () => {
+	const setValue = async () => {
+		const { data } = await useFetch<MyTest>("/api/test");
+
+		test.value = data.value!.text;
+	};
 
 	return {
-		test
+		test,
+		setValue
 	};
 };

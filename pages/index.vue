@@ -1,6 +1,6 @@
 <template>
 	<div grid h-screen place-content-center>
-		<SvgoLogo w="14!" h="14!" mb="5!" mx-auto text-green />
+		<SvgoLogo :font-controlled="false" mx-auto mb-5 h-14 w-14 text-green />
 		<Test />
 	</div>
 </template>

@@ -1,4 +1,3 @@
-declare interface MyInterface {
-	id: string
-	name: string
+declare interface MyTest {
+	text: string
 }
