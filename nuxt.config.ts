@@ -1,4 +1,3 @@
-import AutoImport from "unplugin-auto-import/vite";
 import { colors } from "@unocss/preset-mini";
 
 const dark800 = typeof colors?.dark === "string" ? colors?.dark : colors?.dark?.[800];
@@ -8,6 +7,7 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@unocss/nuxt",
 		"@nuxt/image",
+		"@nuxt/eslint",
 		"nuxt-svgo"
 	],
 	app: {
@@ -20,11 +20,8 @@ export default defineNuxtConfig({
 				{ name: "format-detection", content: "no" }
 			],
 			bodyAttrs: {
-				class: "font-text"
+				class: "font-text antialiased"
 			},
-			link: [
-				{ rel: "shortcut-icon", href: "/favicon.svg" }
-			],
 			noscript: [
 				{ children: "JavaScript is required to run this project" }
 			]
@@ -36,13 +33,16 @@ export default defineNuxtConfig({
 	css: [
 		"@unocss/reset/tailwind.css"
 	],
+	imports: {
+		presets: [
+			{
+				from: "",
+				imports: [""]
+			}
+		]
+	},
 	svgo: {
 		autoImportPath: "./assets/"
-	},
-	vite: {
-		plugins: [
-			AutoImport({})
-		]
 	},
 	vue: {
 		compilerOptions: {
@@ -54,8 +54,9 @@ export default defineNuxtConfig({
 			routes: ["/"]
 		}
 	},
-	sourcemap: {
-		server: true,
-		client: false
+	eslint: {
+		config: {
+			standalone: false
+		}
 	}
 });
