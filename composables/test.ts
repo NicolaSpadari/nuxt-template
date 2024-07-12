@@ -1,10 +1,10 @@
-const test = ref("Text from composable");
-
 export const useTest = () => {
-	const setValue = async () => {
-		const { data } = await useFetch<MyTest>("/api/test");
+	const test = useState("text", () => "Text from composable");
 
-		test.value = data.value!.text;
+	const setValue = async () => {
+		const data = await $fetch<MyInterface>("/api/test");
+
+		test.value = data.text;
 	};
 
 	return {

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 		"@unocss/nuxt",
 		"@nuxt/image",
 		"@nuxt/eslint",
+		"@nuxt/icon",
 		"nuxt-svgo"
 	],
 	app: {
@@ -19,9 +20,6 @@ export default defineNuxtConfig({
 				{ name: "theme-color", content: dark800 },
 				{ name: "format-detection", content: "no" }
 			],
-			bodyAttrs: {
-				class: "font-text antialiased"
-			},
 			noscript: [
 				{ children: "JavaScript is required to run this project" }
 			]
@@ -29,6 +27,9 @@ export default defineNuxtConfig({
 	},
 	experimental: {
 		typedPages: true
+	},
+	icon: {
+		mode: "svg"
 	},
 	css: [
 		"@unocss/reset/tailwind.css"
@@ -43,16 +44,6 @@ export default defineNuxtConfig({
 	},
 	svgo: {
 		autoImportPath: "./assets/"
-	},
-	vue: {
-		compilerOptions: {
-			isCustomElement: (tag: string) => tag.startsWith("i-")
-		}
-	},
-	nitro: {
-		prerender: {
-			routes: ["/"]
-		}
 	},
 	eslint: {
 		config: {

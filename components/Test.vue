@@ -1,9 +1,9 @@
 <template>
-	<div text-center space-y-5>
-		{{ test }}
-		<i-heroicons-solid-check h-5 w-5 text-blue-400 />
+	<div flex-center flex-col gap-y-5>
+		<p>{{ test }}</p>
+		<Icon name="heroicons-solid:check" size-5 text-blue-400 />
 
-		<button mt-5 block mx-auto @click="setValue()">
+		<button @click="setValue()">
 			Update text
 		</button>
 	</div>
@@ -12,9 +12,3 @@
 <script lang="ts" setup>
 	const { test, setValue } = useTest();
 </script>
-
-<style lang="scss" scoped>
-.myrule {
-	@apply color-red-500 border-collapse;
-}
-</style>

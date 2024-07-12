@@ -1,6 +1,6 @@
 <template>
 	<Html min-h-screen>
-		<Body overflow-x-hidden>
+		<Body text-text overflow-x-hidden antialiased>
 			<NuxtPage />
 		</Body>
 	</Html>

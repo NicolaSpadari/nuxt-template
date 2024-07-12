@@ -1,7 +1,6 @@
 import {
 	defineConfig,
 	presetAttributify,
-	presetIcons,
 	presetTagify,
 	presetTypography,
 	presetUno,
@@ -11,7 +10,6 @@ import {
 } from "unocss";
 
 export default defineConfig({
-	safelist: ["font-text antialiased"],
 	shortcuts: [
 		["crate", "mx-auto max-w-7xl px-4 lg:px-8 sm:px-6"],
 		["flex-center", "flex justify-center items-center"],
@@ -22,12 +20,6 @@ export default defineConfig({
 		presetUno(),
 		presetTagify(),
 		presetAttributify(),
-		presetIcons({
-			extraProperties: {
-				display: "inline-block",
-				"vertical-align": "middle"
-			}
-		}),
 		presetTypography(),
 		presetWebFonts({
 			fonts: {
