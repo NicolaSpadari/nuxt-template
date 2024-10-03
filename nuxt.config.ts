@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 		"@unocss/nuxt",
 		"@nuxt/image",
 		"@nuxt/eslint",
+		"@nuxt/fonts",
 		"@nuxt/icon",
 		"nuxt-svgo"
 	],
@@ -27,6 +28,14 @@ export default defineNuxtConfig({
 	},
 	experimental: {
 		typedPages: true
+	},
+	fonts: {
+		defaults: {
+			weights: [`${100}..${900}`]
+		}
+	},
+	image: {
+		provider: "ipx"
 	},
 	icon: {
 		mode: "svg"
@@ -50,5 +59,5 @@ export default defineNuxtConfig({
 			standalone: false
 		}
 	},
-	compatibilityDate: "2024-08-01"
+	compatibilityDate: "2024-10-01"
 });
