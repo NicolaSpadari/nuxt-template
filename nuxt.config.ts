@@ -10,7 +10,8 @@ export default defineNuxtConfig({
 		"@nuxt/eslint",
 		"@nuxt/fonts",
 		"@nuxt/icon",
-		"nuxt-svgo"
+		"nuxt-svgo",
+		"nuxt-neon"
 	],
 	app: {
 		head: {
