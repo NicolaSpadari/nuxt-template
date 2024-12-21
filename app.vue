@@ -1,6 +1,7 @@
 <template>
-	<Html min-h-screen>
-		<Body text-text overflow-x-hidden antialiased>
+	<Html font-default antialiased>
+		<Body class="overflow-x-hidden">
+			<SiteHeader />
 			<NuxtPage />
 		</Body>
 	</Html>

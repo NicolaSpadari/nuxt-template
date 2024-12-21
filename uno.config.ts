@@ -24,7 +24,7 @@ export default defineConfig({
 	theme: {
 		fontFamily: {
 			heading: "Montserrat",
-			text: "Inter"
+			default: "Inter"
 		}
 	},
 	transformers: [

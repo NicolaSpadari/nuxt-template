@@ -4,7 +4,7 @@
 			<li v-for="item in data" :key="item.id" space-x-3>
 				<span font-bold>{{ item.name }}</span>
 
-				<button type="button" @click="chooseItem(item)">
+				<button type="button" @click="selectedItem = item">
 					edit
 				</button>
 				<button type="button" @click="del(item.id)">
@@ -36,24 +36,21 @@
 	const data = ref<NeonObject[]>([]);
 	const selectedItem = ref<NeonObject | null>(null);
 
+	definePageMeta({
+		title: "Storage"
+	});
+
 	const getData = async () => {
 		data.value = await neonClient("SELECT * FROM demo ORDER BY id") as NeonObject[];
 	};
 
 	await getData();
 
-	const chooseItem = (item: NeonObject) => {
-		selectedItem.value = unref(item);
-	};
 	const edit = async (id: number) => {
 		await neonClient(`UPDATE demo SET name = '${selectedItem.value!.name}', value = '${selectedItem.value!.value}' WHERE id = ${id}`);
-		await getData();
 	};
 	const del = async (id: number) => {
-		// eslint-disable-next-line no-alert
-		if (confirm("Are you sure?")) {
-			await neonClient(`DELETE FROM demo WHERE id = ${id}`);
-			await getData();
-		}
+		await neonClient(`DELETE FROM demo WHERE id = ${id}`);
+		await getData();
 	};
 </script>
