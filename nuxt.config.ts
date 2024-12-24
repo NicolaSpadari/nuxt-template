@@ -1,12 +1,7 @@
-import Tailwind from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
 	modules: [
 		"@vueuse/nuxt",
-		"@nuxt/image",
 		"@nuxt/eslint",
-		"@nuxt/fonts",
-		"@nuxt/icon",
 		"@nuxt/ui",
 		"nuxt-svgo"
 	],
@@ -23,19 +18,8 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	experimental: {
-		typedPages: true
-	},
-	fonts: {
-		defaults: {
-			weights: [`${100}..${900}`]
-		}
-	},
-	image: {
-		provider: "ipx"
-	},
-	icon: {
-		mode: "svg"
+	ui: {
+		prefix: "Nuxt"
 	},
 	css: [
 		"~/assets/css/main.css"
@@ -48,11 +32,11 @@ export default defineNuxtConfig({
 			}
 		]
 	},
-	vite: {
-		plugins: [Tailwind()]
-	},
 	svgo: {
 		autoImportPath: "./assets/"
+	},
+	experimental: {
+		typedPages: true
 	},
 	eslint: {
 		config: {
