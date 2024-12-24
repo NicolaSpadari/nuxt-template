@@ -1,17 +1,14 @@
-import { colors } from "@unocss/preset-mini";
-
-const dark800 = typeof colors?.dark === "string" ? colors?.dark : colors?.dark?.[800];
+import Tailwind from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
 	modules: [
 		"@vueuse/nuxt",
-		"@unocss/nuxt",
 		"@nuxt/image",
 		"@nuxt/eslint",
 		"@nuxt/fonts",
 		"@nuxt/icon",
-		"nuxt-svgo",
-		"nuxt-neon"
+		"@nuxt/ui",
+		"nuxt-svgo"
 	],
 	app: {
 		head: {
@@ -19,7 +16,6 @@ export default defineNuxtConfig({
 			charset: "utf-8",
 			viewport: "width=device-width, initial-scale=1",
 			meta: [
-				{ name: "theme-color", content: dark800 },
 				{ name: "format-detection", content: "no" }
 			],
 			noscript: [
@@ -42,7 +38,7 @@ export default defineNuxtConfig({
 		mode: "svg"
 	},
 	css: [
-		"@unocss/reset/tailwind.css"
+		"~/assets/css/main.css"
 	],
 	imports: {
 		presets: [
@@ -52,6 +48,9 @@ export default defineNuxtConfig({
 			}
 		]
 	},
+	vite: {
+		plugins: [Tailwind()]
+	},
 	svgo: {
 		autoImportPath: "./assets/"
 	},
@@ -59,6 +58,9 @@ export default defineNuxtConfig({
 		config: {
 			standalone: false
 		}
+	},
+	future: {
+		compatibilityVersion: 4
 	},
 	compatibilityDate: "2024-12-01"
 });

@@ -1,13 +1,13 @@
 {
 	"name": "nuxt-template",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"private": true,
 	"packageManager": "pnpm@9.15.1",
 	"description": "Personal Nuxt 3 starter template",
 	"author": "Nicola Spadari",
 	"engines": {
-		"node": ">=20"
+		"node": ">=23"
 	},
 	"scripts": {
 		"dev": "nuxt dev",
@@ -21,19 +21,21 @@
 	"dependencies": {
 		"@nuxt/fonts": "^0.10.3",
 		"@nuxt/image": "^1.8.1",
-		"radix-vue": "^1.9.11"
+		"@nuxt/ui": "3.0.0-alpha.10",
+		"@tailwindcss/vite": "0.0.0-development.1",
+		"nuxt": "^3.14.1592",
+		"tailwindcss": "4.0.0-beta.8",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^3.12.0",
 		"@nuxt/eslint": "^0.7.4",
 		"@nuxt/icon": "^1.10.3",
-		"@unocss/eslint-plugin": "^0.65.2",
-		"@unocss/nuxt": "^0.65.2",
 		"@vueuse/core": "^12.0.0",
 		"@vueuse/nuxt": "^12.0.0",
 		"eslint": "^9.17.0",
 		"nuxt": "^3.14.1592",
-		"nuxt-neon": "^0.2.4",
 		"nuxt-svgo": "^4.0.9",
 		"sass": "^1.83.0",
 		"typescript": "^5.7.2"
