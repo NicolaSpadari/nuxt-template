@@ -1,9 +1,9 @@
 <template>
-	<NuxtContainer>
-		<NuxtTitle class="text-center mt-20">
+	<UContainer>
+		<UTitle type="h1" class="text-center mt-20">
 			{{ labels.welcome }}
-		</NuxtTitle>
-	</NuxtContainer>
+		</UTitle>
+	</UContainer>
 </template>
 
 <script lang="ts" setup>

@@ -1,10 +1,10 @@
 <template>
 	<Html class="min-h-[100dvh] scroll-smooth overflow-x-hidden">
 		<Body class="antialiased font-sans">
-			<NuxtApp>
+			<UApp>
 				<SiteHeader />
 				<NuxtPage />
-			</NuxtApp>
+			</UApp>
 		</Body>
 	</Html>
 </template>

@@ -18,9 +18,6 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	ui: {
-		prefix: "Nuxt"
-	},
 	css: [
 		"~/assets/css/main.css"
 	],
