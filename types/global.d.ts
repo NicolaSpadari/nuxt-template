@@ -1,5 +1,3 @@
-declare interface NeonObject {
-	id: number
-	name: string
-	value: number
+declare interface MyInterface {
+	text: string
 }

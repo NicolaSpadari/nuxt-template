@@ -10,8 +10,7 @@ export default defineNuxtConfig({
 		"@nuxt/eslint",
 		"@nuxt/fonts",
 		"@nuxt/icon",
-		"nuxt-svgo",
-		"nuxt-neon"
+		"nuxt-svgo"
 	],
 	app: {
 		head: {
@@ -27,9 +26,9 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	experimental: {
-		typedPages: true
-	},
+	css: [
+		"@unocss/reset/tailwind.css"
+	],
 	fonts: {
 		defaults: {
 			weights: [`${100}..${900}`]
@@ -41,9 +40,9 @@ export default defineNuxtConfig({
 	icon: {
 		mode: "svg"
 	},
-	css: [
-		"@unocss/reset/tailwind.css"
-	],
+	svgo: {
+		autoImportPath: "./assets/"
+	},
 	imports: {
 		presets: [
 			{
@@ -52,13 +51,16 @@ export default defineNuxtConfig({
 			}
 		]
 	},
-	svgo: {
-		autoImportPath: "./assets/"
-	},
 	eslint: {
 		config: {
 			standalone: false
 		}
+	},
+	experimental: {
+		typedPages: true
+	},
+	future: {
+		compatibilityVersion: 4
 	},
 	compatibilityDate: "2024-12-01"
 });

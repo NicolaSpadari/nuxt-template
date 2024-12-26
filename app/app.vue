@@ -1,6 +1,6 @@
 <template>
-	<Html font-default antialiased>
-		<Body class="overflow-x-hidden">
+	<Html class="smooth-scroll overflow-x-hidden">
+		<Body class="font-default antialiased">
 			<SiteHeader />
 			<NuxtPage />
 		</Body>
@@ -10,7 +10,6 @@
 <style lang="scss">
 	html {
 		-webkit-tap-highlight-color: transparent;
-		scroll-behavior: smooth;
 	}
 	img {
 		-webkit-user-drag: none;
