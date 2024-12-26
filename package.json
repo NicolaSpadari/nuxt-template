@@ -7,7 +7,7 @@
 	"description": "Personal Nuxt 3 starter template",
 	"author": "Nicola Spadari",
 	"engines": {
-		"node": ">=20"
+		"node": ">=23"
 	},
 	"scripts": {
 		"dev": "nuxt dev",
