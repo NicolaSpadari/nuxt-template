@@ -3,7 +3,7 @@
 		<div crate class="py-4">
 			<div class="flex items-center gap-x-4">
 				<NuxtLink to="/" class="flex-shrink-0">
-					<SvgoLogo :font-controlled="false" class="mx-auto size-10 text-green" />
+					<Asset name="Logo" class="mx-auto size-10 text-green" />
 				</NuxtLink>
 				<ul class="flex gap-x-4">
 					<li v-for="page in pages" :key="page.path">
