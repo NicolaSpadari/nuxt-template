@@ -17,3 +17,15 @@ Run project:
 ```sh
 $ nr dev # or pnpm run dev
 ```
+
+## Usage with Docker
+
+Build container:
+```sh
+docker build -t my-nuxt-app .
+```
+
+Run static generated project:
+```
+docker run -it -p 3000:80 --name my-nuxt-app --rm --init my-nuxt-app
+```
