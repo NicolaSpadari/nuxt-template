@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 				{ name: "format-detection", content: "no" }
 			],
 			noscript: [
-				{ children: "JavaScript is required to run this project" }
+				{ textContent: "JavaScript is required to run this project" }
 			]
 		}
 	},
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 	],
 	fonts: {
 		defaults: {
-			weights: [`${100}..${900}`]
+			weights: ["100 900"]
 		}
 	},
 	image: {
@@ -43,14 +43,14 @@ export default defineNuxtConfig({
 	svgo: {
 		autoImportPath: "./assets/"
 	},
-	imports: {
-		presets: [
-			{
-				from: "",
-				imports: [""]
-			}
-		]
-	},
+	// imports: {
+	// 	presets: [
+	// 		{
+	// 			from: "",
+	// 			imports: [""]
+	// 		}
+	// 	]
+	// },
 	eslint: {
 		config: {
 			standalone: false
@@ -62,5 +62,5 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 4
 	},
-	compatibilityDate: "2024-12-01"
+	compatibilityDate: "2025-05-01"
 });
