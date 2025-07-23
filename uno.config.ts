@@ -1,8 +1,8 @@
-import { presetWind3 } from "@unocss/preset-wind3";
 import {
 	defineConfig,
 	presetAttributify,
 	presetTypography,
+	presetWind4,
 	transformerDirectives,
 	transformerVariantGroup
 } from "unocss";
@@ -15,7 +15,7 @@ export default defineConfig({
 		["absolute-center-v", "top-50% transform -translate-y-50%"]
 	],
 	presets: [
-		presetWind3(),
+		presetWind4(),
 		presetAttributify(),
 		presetTypography()
 	],

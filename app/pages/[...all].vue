@@ -1,6 +1,6 @@
 <template>
 	<div crate class="grid place-content-center">
-		<p class="py-10 text-3xl">
+		<p class="text-3xl py-10">
 			404
 		</p>
 	</div>

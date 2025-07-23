@@ -1,6 +1,6 @@
 export default defineAppConfig({
 	labels: {
-		welcome: "Nuxt 3 starter template"
+		welcome: "Nuxt 4 starter template"
 	},
 	links: {
 		github: {
