@@ -1,44 +1,48 @@
 {
-	"name": "nuxt-template",
-	"type": "module",
-	"version": "4.0.0",
-	"private": true,
-	"packageManager": "pnpm@10.13.1",
-	"description": "Personal Nuxt 4 starter template with UnoCSS",
-	"author": "Nicola Spadari",
-	"engines": {
-		"node": ">=23"
-	},
-	"scripts": {
-		"dev": "nuxt dev",
-		"build": "nuxt build",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"preinstall": "npx only-allow pnpm",
-		"postinstall": "nuxt prepare",
-		"lint": "eslint . --fix"
-	},
-	"dependencies": {
-		"nuxt": "^4.0.1",
-		"vue": "^3.5.18",
-		"vue-router": "^4.5.1"
-	},
-	"devDependencies": {
-		"@antfu/eslint-config": "^4.18.0",
-		"@nuxt/eslint": "^1.7.0",
-		"@nuxt/fonts": "^0.11.4",
-		"@nuxt/icon": "^1.15.0",
-		"@nuxt/image": "^1.10.0",
-		"@unocss/eslint-plugin": "^66.3.3",
-		"@unocss/nuxt": "^66.3.3",
-		"@vueuse/core": "^13.5.0",
-		"@vueuse/nuxt": "^13.5.0",
-		"eslint": "^9.31.0",
-		"nuxt-svgo": "^4.2.4",
-		"sass": "^1.89.2",
-		"typescript": "^5.8.3"
-	},
-	"resolutions": {
-		"typescript": "npm:tslite@latest"
-	}
+  "name": "nuxt-template",
+  "type": "module",
+  "version": "4.0.0",
+  "private": true,
+  "packageManager": "bun@1.2.19",
+  "description": "Personal Nuxt 4 starter template with UnoCSS",
+  "author": "Nicola Spadari",
+  "engines": {
+    "node": ">=23"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preinstall": "npx only-allow bun",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "nuxt": "^4.0.1",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.19.0",
+    "@nuxt/eslint": "^1.7.1",
+    "@nuxt/fonts": "^0.11.4",
+    "@nuxt/icon": "^1.15.0",
+    "@nuxt/image": "^1.10.0",
+    "@unocss/eslint-plugin": "^66.3.3",
+    "@unocss/nuxt": "^66.3.3",
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/nuxt": "^13.5.0",
+    "eslint": "^9.31.0",
+    "nuxt-svgo": "^4.2.4",
+    "sass": "^1.89.2",
+    "typescript": "^5.8.3"
+  },
+  "resolutions": {
+    "typescript": "npm:tslite@latest"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "unrs-resolver"
+  ]
 }
